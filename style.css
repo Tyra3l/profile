@@ -1,0 +1,161 @@
+body {
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #FCFFE7;
+}
+
+div {
+  padding: 20px;
+  max-width: 100%;
+  width: 300px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  margin: 10px auto;
+}
+
+#name_h1 {
+  color: #2B3467;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+h2 {
+  color: #2B3467;
+  font-family: 'Lora', serif;
+}
+
+p {
+  color: #2B3467;
+  font-family: 'Hind Madurai', sans-serif;
+}
+
+.follow_links {
+  color: #2B3467;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  resize: none;
+  width: 100%;
+  align-items: center;
+}
+
+.button-link{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:active {
+  background-color: #FCFFE7;
+  transform: scale(0.95);
+}
+
+footer {
+  color: #2B3467;
+}
+@media (max-width: 768px) {
+  div {
+    width: 90%;
+  }
+
+  img {
+    height: auto;
+    width: 80%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body .page1{
+    font-family: 'Lato', sans-serif;
+    background-color: #000000;
+    padding: 0px;
+    margin: 0px;
+    color: #fff;
+}
+body .page2{
+    margin: 20px 80px;
+}
+
+/*Barre de navigation*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #000000;
+    padding: 10px 0px;
+}
+nav .onglets{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+nav .onglets a{
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+nav .onglets a:hover{
+    background: rgb(0, 104, 139);
+}
+
+
+/*Fin de la barre de navigation*/
+
+/*Header*/
+header{
+    margin-top: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 800px;
+}
+.bloc{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.bloc video{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+.bloc h1{
+    text-align: center;
+    font-size: 60px;
+    padding: 150px;
+    text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
+}
+.bloc::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+    background-color: rgba(0, 0, 0, 0.35);
+    }
+/*Fin du Header*/
