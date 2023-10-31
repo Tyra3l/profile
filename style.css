@@ -1,30 +1,24 @@
+/* Styles généraux */
+
 body {
-  text-align: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #FCFFE7;
-}
-
-div {
-  padding: 20px;
-  max-width: 100%;
-  width: 300px;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
-  margin: 10px auto;
-}
-
-#name_h1 {
-  color: #2B3467;
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
 }
 
-img {
-  width: 100%;
-  height: auto;
+div{
+  background-color: #FCFFE7;
   border-radius: 6px;
+  width: 50%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  margin: 0px auto;
+}
+
+h1 {
+  color: #2B3467;
+  font-size: 36px;
+  margin: 0;
 }
 
 h2 {
@@ -34,128 +28,92 @@ h2 {
 
 p {
   color: #2B3467;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-.follow_links {
-  color: #2B3467;
+img.img {
+  height: 150px;
+  width: 120px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  object-fit: cover;
 }
+
+/* Animation pour le titre */
+
+#name_h1 {
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation pour les icônes de réseaux sociaux */
+
+.follow-links .logo {
+  font-size: 32px;
+  color: #2B3467;
+  transition: transform 0.2s ease;
+  margin: 0 10px;
+  opacity: 0.7;
+}
+
+.follow-links .logo:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Animation pour le formulaire de contact */
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  border-radius: 30px;
-  border: 0;
-  outline: 0;
-  resize: none;
-  width: 100%;
+  animation: slideInFromLeft 2s ease;
+  max-width: 400px;
+  margin: 0 auto;
   align-items: center;
 }
 
-.button-link{
-  width: 100%;
-  height: 50px;
-  background-color: white;
-  color: #000;
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.button-link {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Animation pour le bas de page */
+
+footer {
+  color: #2B3467;
+  font-size: 14px;
+  animation: fadeIn 2s ease;
+}
+
+/* Styles pour le bouton du formulaire */
+
+.button-link input[type="submit"] {
+  background-color: #FCFFE7;
+  color: #2B3467;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  padding: 10px 20px;
 }
 
-button:active {
-  background-color: #FCFFE7;
-  transform: scale(0.95);
+.button-link input[type="submit"]:hover {
+  background-color: #2B3467;
+  color: #FCFFE7;
+  transform: scale(1.05);
 }
-
-footer {
-  color: #2B3467;
-}
-@media (max-width: 768px) {
-  div {
-    width: 90%;
-  }
-
-  img {
-    height: auto;
-    width: 80%;
-  }
-}
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-body .page1{
-    font-family: 'Lato', sans-serif;
-    background-color: #000000;
-    padding: 0px;
-    margin: 0px;
-    color: #fff;
-}
-body .page2{
-    margin: 20px 80px;
-}
-
-/*Barre de navigation*/
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    background-color: #000000;
-    padding: 10px 0px;
-}
-nav .onglets{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 7px;
-}
-nav .onglets a{
-    margin-right: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    transition: background 0.5s;
-}
-nav .onglets a:hover{
-    background: rgb(0, 104, 139);
-}
-
-
-/*Fin de la barre de navigation*/
-
-/*Header*/
-header{
-    margin-top: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 800px;
-}
-.bloc{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-.bloc video{
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 50%;
-    left: 50%;
-    z-index: -100;
-    transform: translate(-50%, -50%);
-}
-.bloc h1{
-    text-align: center;
-    font-size: 60px;
-    padding: 150px;
-    text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px 1px 0 black, -1px -1px 0 black;
-}
-.bloc::before{
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    z-index: -99;
-    background-color: rgba(0, 0, 0, 0.35);
-    }
-/*Fin du Header*/
